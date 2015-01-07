@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "QRCodeGenerator.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    UIImage *imgs=[UIImage imageNamed:@"icon.png"];
+    _img.image = [QRCodeGenerator qrImageForString:@"啦啦啦啦啦了" imageSize:_img.bounds.size.width Topimg:imgs];
+
 }
 
 - (void)didReceiveMemoryWarning {
